@@ -1,0 +1,106 @@
+<html lang="vi"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <title>Săn xu ế 😋</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+        .snow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: #aaaaaa; 
+            font-size: 10px;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(20px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body style="background: url('/img/tetgif.gif') top left no-repeat, url('/img/tet.png') top right no-repeat;background-size: 30%, 50%;">
+<div class="snow-container"></div>
+<div class="shareArticle">
+  <div class="shareSocial">
+    <h3 class="socialTitle">Tham gia nhóm:</h3>
+    <ul class="socialList">
+      <li><a href="https://www.facebook.com/groups/180249687420161" target="_blank"><i class="fa fa-facebook" style=" top: 27px; left: 25px; "></i></a></li>
+<!--       <li><a href=""><i class="fa fa-telegram"></i></a></li> -->
+      <li><a href="https://zalo.me/g/edwhws799"><img src="https://shopeelivecoin.vercel.app/img/zalo.png" style="height: 37px;"></a></li>
+      <li><a href="https://t.me/shopeelivexucoin"><i class="fa fa-telegram"></i></a></li>
+    </ul>
+  </div>
+</div>
+<a href="/" class="button" style="
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;">👈 vòng quay</a>
+<a href="/tui.html" class="button" style="  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;">Túi quà 👉</a><br><br>
+<!-- <a href="/video" class="button" style="
+  padding: 8px 16px;
+  background-color: #ee4d2d;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  ">🛒video</a> -->
+  <h1>Săn xu ế 😋</h1>
+  
+  <h5>Tham gia nhóm telegram bên dưới để nhận thông báo các live có xu ế!</h5>
+  
+  <a href="https://t.me/xueshopee" style="
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #e2a90d;
+">👇 vào nhóm 👇</a>
+<a href="https://t.me/xueshopee"><img src="/img/tele.png" alt="Girl in a jacket" width="100%"></a><div id="loading" class="loading" style="margin-top: 12px; display: none;">Đợi xíu...</div>
+  
+      <script>
+        const snowContainer = document.querySelector('.snow-container');
+        const snowflakes = 10; 
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '🌸';
+            snowflake.style.left = Math.random() * window.innerWidth + 'px';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.fontSize = Math.random() * 20 + 10 + 'px';
+            snowflake.style.opacity = Math.random();
+            snowContainer.appendChild(snowflake);
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+        setInterval(createSnowflake, 500);
+    </script>
+
+</body></html>
